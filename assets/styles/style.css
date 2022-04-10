@@ -1,0 +1,19 @@
+.resultArray,
+.sumArray {
+    display: flex;
+    padding: 1vw 10vw;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 25vw;
+}
+
+.buttonArray {
+    margin-top: 1vw;
+    margin-left: 20vw;
+    color: white;
+    border: blue;
+    background-color: blue;
+    border-radius: 5px;
+    width: 120px;
+    height: 30px;
+}
