@@ -17,3 +17,60 @@
     width: 120px;
     height: 30px;
 }
+
+.buttonMoto {
+    margin-top: 1vw;
+    margin-left: 8vw;
+    color: white;
+    border: rgb(194, 70, 48);
+    background-color: rgb(194, 70, 48);
+    border-radius: 5px;
+    width: 120px;
+    height: 30px;
+}
+
+.field {
+    margin-top: 1vw;
+    margin-left: 20vw;
+    border-color: dodgerblue;
+    width: 30vw;
+    height: 37vw;
+    padding: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.headerCalcs {
+    padding: 1px;
+    background-color: dodgerblue;
+    border-bottom: 1px solid transparent;
+}
+
+.headerText2 {
+    text-align: center;
+    color: indigo;
+    font-size: 1vw;
+    margin: 10px;
+}
+
+.headerText {
+    text-align: center;
+    color: rgb(245, 255, 255);
+    font-size: 2vw;
+    margin: 0;
+    margin-top: 15px;
+}
+
+.form-group {
+    margin-left: 1vw;
+    margin-top: 1vw;
+}
+
+.form-moto {
+    margin-left: 1vw;
+}
+
+.form-result {
+    margin-left: 0;
+    width: 10px;
+}

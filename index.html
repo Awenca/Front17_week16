@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/styles/normalize.css">
     <link rel="stylesheet" href="./assets/styles/style.css">
-    <title>JS_15 week</title>
+    <title>JS_16 week</title>
 </head>
 <body>
 
@@ -23,5 +23,59 @@
         </div>
         <!-- Arrays end -->
 
-    <script src="./assets/js/index.js"></script>
+        <!-- Calcs moto start-->
+        <fieldset class="field">
+            <div class="headerCalcs">
+                <p class="headerText">Подбрать мотоцикл из Японии</p>
+                <p class="headerText2">Расчет стоимости растомаживания мотоциклов</p>
+            </div>
+            <label class="form-group">Стоимость на аукционе</label>
+            <input type="number" class="form-group" id="priseMoto"><br>
+
+            <select class="form-group" name="currencyMoto" id="currencyMoto">
+                <option disabled>Выберите валюту</option>
+                <option value="82">Доллар</option>
+                <option value="90">Евро</option>
+                <option value="1">Рубли</option>
+            </select><br>
+
+            <label class="form-group">Объем, см3</label>
+            <input type="number" class="form-group" id="volumeMoto"><br>
+
+            <label class="form-group">Мощность в л.с.</label>
+            <input type="number" class="form-group" id="powerMoto"><br>
+
+                <p class="form-group">Тип двигателя</p>
+                <input class="form-moto" type="radio" name="typeEngine" id="typeEngine1">
+                <label for="typeEngine1">Бензин</label>
+                <input type="radio" class="form-moto" name="typeEngine" id="typeEngine2">
+                <label for="typeEngine2">Дизель</label>
+                <input type="radio" class="form-moto" name="typeEngine" id="typeEngine3">
+                <label for="typeEngine3">Электрический</label><br>
+            
+            <p class="form-group">Возраст</p>
+            <input class="form-moto" type="radio" name="ageMoto" id="ageMoto1">
+            <label for="ageMoto1">меньше 5 лет</label>
+            <input type="radio" class="form-moto" name="ageMoto" id="ageMoto2">
+            <label for="ageMoto2">от 5 до 7 лет</label>
+            <input type="radio" class="form-moto" name="ageMoto" id="ageMoto3">
+            <label for="ageMoto3">больше 7</label><br>
+
+            <p class="form-moto">Наши сборы и услуги</p>
+            <div class="form-moto">
+                <input type="checkbox" id="Service1" name="accept">
+                <label for="Service1">С сопровождением по Японии</label><br>
+            </div>
+            <div class="form-moto">
+                <input type="checkbox" id="Service2" name="accept">
+                <label for="Service2">С сопровождением по России</label>
+            </div>
+            <div class="form-moto">
+                <button class="buttonMoto" onclick="calcMoto()">Рассчитать</button>
+                <div class="form-result" id="sumMoto"></div>
+            </div>
+        </fieldset>
+        <!-- Calcs moto end-->
+    <script src="./assets/js/index.js">
+    </script>
 </body>
