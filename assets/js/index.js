@@ -29,11 +29,20 @@ function calcMoto(){
     const service = document.querySelector('#accept:checked');
 
     // Пересчет в валюте
-    if (currency.value == "82") {
+    // let prise = (currency == null) ? alert ('Укажите валюту'):
+    //     (currency.value == "82") ? prise/82:
+    //     (currency.value == 0.93) ? prise*0.93:
+    //     prise *1;
+
+    if (currency == null) { alert ('Укажите валюту');}
+    else if (currency.value == "82") {
         let prise = prise/82;
     }
     else if (currency.value == 0.93) {
         let prise = prise*0.93;
+    }
+    else {
+        let prise = prise * 1;
     }
     // Таможенное оформление
         if (prise < 2500) {
@@ -97,7 +106,7 @@ function array4 () {
         let Newarr4 = arr4[i];
         if (Newarr4.length>3){
             let result = i;
+            console.log (result);
         }
     }
-console.log (result);
 }
