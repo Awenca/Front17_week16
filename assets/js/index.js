@@ -23,10 +23,10 @@ function calcMoto(){
     let prise = document.querySelector("#priseMoto").value;
     const volume = document.querySelector ("#volumeMoto").value;
     const power = document.querySelector("#powerMoto").value;
-    const currency = document.querySelector ('#accept:checked');
+    const currency = document.querySelector ('#currencyMoto').value;
     const typeEngine = document.getElementsByName ('typeEngine');
     const age = document.getElementsByName ('ageMoto');
-    const service = document.querySelector('#accept:checked');
+    const service = document.getElementsByName('serviceMoto').value;
 
     // Пересчет в валюте
     // let prise = (currency == null) ? alert ('Укажите валюту'):
@@ -34,17 +34,10 @@ function calcMoto(){
     //     (currency.value == 0.93) ? prise*0.93:
     //     prise *1;
 
-    if (currency == null) { alert ('Укажите валюту');}
-    else if (currency.value == "82") {
-        let prise = prise/82;
-    }
-    else if (currency.value == 0.93) {
-        let prise = prise*0.93;
-    }
-    else {
-        let prise = prise * 1;
-    }
+    if (!currency) { alert ('Укажите валюту');}
+    else prise *= +currency;
     // Таможенное оформление
+        let customs = '';
         if (prise < 2500) {
             let customs = 1550;
         }
@@ -55,6 +48,7 @@ function calcMoto(){
             let customs = 8530;
         }
     // Выбор типа двигателя
+    let expenses = '';
         if (typeEngine == null) { alert ('Укажите тип двигателя');}
         else if (typeEngine.value == "Бензин" || typeEngine.value == "Дизель") {
             let recycle = 5200; //утилизационный сбор
@@ -71,21 +65,11 @@ function calcMoto(){
         else {
             let expenses = 0.15*prise + 511*power + 0.2*prise + 3400;
         }
-        if (service == null) {
-            let result = expenses;
-        }
-        else if (service.value == "С сопровождением по России") {
-            let result = expenses + 2000;
-        }
-        else if (service.value == "С сопровождением по Японии") {
-            let result = expenses + 1000;
-        }
-        else {
-            let result = expenses + 3000;
-        }
+        if (!service) { result = expenses;}
+        else result = +expenses + +service;
         console.log (result);
         document.querySelector('#sumMoto').innerHTML = result;
-}
+    }
 
 function array2 () {
     let arr2 = ['js', 'css', 'html'];
